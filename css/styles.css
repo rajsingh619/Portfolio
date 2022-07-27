@@ -1,0 +1,92 @@
+body{
+    text-align: center;
+    font-family: 'Merriweather',sans-serif;
+}
+h1{
+   /* font-size: 562.5%;    /*defining size in pixels is not dynamic..100% is 16px == 90px is 562.5%;*/
+   font-size: 5.625rem; /*1em=16px;*/
+   margin: 50px auto 0 auto;
+   color: #66BFBF;
+   font-family: 'Sacramento',sans-serif;
+}
+h2{
+    font-size: 2.5rem;
+    color: #66BFBF;
+    font-weight: normal;
+}
+h3{
+    color: #11999E;
+}
+a{
+    color: #11999E;
+}
+p{
+    line-height: 2;
+}
+.pro{
+    text-decoration: underline;
+}
+.skill-row{
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+   
+}
+.skill1{
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+.skill2{
+    float: right;
+    margin-left: 30px;
+    width:25%;
+}
+
+
+.top-cloud{
+   position:absolute;
+   right: 300px;
+   top: 50px;
+}
+.bottom-cloud{
+    position:absolute;
+    left: 300px;
+    bottom: 300px;
+}
+.top-container{
+    background-color: #EAF6F6;
+    position: relative;
+    padding-top: 100px;
+}
+.middle-container{
+    margin: 100px 0;
+}
+.profile-description{
+    width: 25%;
+    margin: auto;
+    
+}
+.profile-img{
+    width: 15%;
+}
+hr{
+    border: dotted grey 6px;
+    width: 5%;
+    border-bottom: none;
+    margin: 100px auto;
+    
+}
+.bottom-container{
+    padding: 50px 0 20px;
+    height: 150px;
+    background-color: #66BFBF;
+}
+.footer-link{
+    margin-right: 30px;
+   
+    color: #11999E;
+}
+.copyright{
+    color: #EAF6F6;
+}
