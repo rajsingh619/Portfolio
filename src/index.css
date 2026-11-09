@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-zinc-950 font-sans text-zinc-300 antialiased selection:bg-accent/30 selection:text-white;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-zinc-950 rounded;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-5xl px-4 sm:px-6;
+  }
+  .card {
+    @apply rounded-xl border border-zinc-800 bg-zinc-900/60;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1 font-mono text-xs text-zinc-300;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-zinc-950 hover:bg-accent-dim;
+  }
+  .btn-ghost {
+    @apply btn border border-zinc-800 text-zinc-200 hover:border-zinc-600 hover:bg-zinc-900;
+  }
+  .link {
+    @apply text-zinc-400 transition-colors hover:text-accent;
+  }
+  /* dashed centre line of the Experience "road"; colour comes from text-* */
+  .road-lane {
+    background-image: repeating-linear-gradient(to bottom, currentColor 0 14px, transparent 14px 28px);
+  }
+}
+
+/* contribution-graph squares pop in, left to right */
+@keyframes cell-in {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.cell-in {
+  opacity: 0;
+  animation: cell-in 0.35s ease-out forwards;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .cell-in {
+    animation: none;
+    opacity: 1;
+  }
+}
