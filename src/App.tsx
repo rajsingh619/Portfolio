@@ -21,8 +21,8 @@ function ScrollManager() {
 
 export default function App() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <Analytics/>
+    <>
+     <div className="flex min-h-screen flex-col">
       <ScrollManager />
       <Navbar />
       <main className="flex-1">
@@ -33,5 +33,8 @@ export default function App() {
       </main>
       <Footer />
     </div>
+    <Analytics/>
+    </>
+   
   )
 }
