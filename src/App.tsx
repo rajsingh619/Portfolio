@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
+import { Analytics } from "@vercel/analytics/next"
 
 function ScrollManager() {
   const { pathname, hash } = useLocation()
@@ -21,6 +22,7 @@ function ScrollManager() {
 export default function App() {
   return (
     <div className="flex min-h-screen flex-col">
+      <Analytics/>
       <ScrollManager />
       <Navbar />
       <main className="flex-1">
