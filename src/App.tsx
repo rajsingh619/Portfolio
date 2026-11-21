@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/react';
 
 function ScrollManager() {
   const { pathname, hash } = useLocation()
